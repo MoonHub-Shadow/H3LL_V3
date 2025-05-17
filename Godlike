@@ -17,9 +17,9 @@ local folder4 = AutoWeight:AddFolder("Tools")
 local folder5 = AutoWeight:AddFolder("Gym Machines")
 
 local AutoKill = window:AddTab("Auto Kill")
-local folder6 = AutoKill:AddFolder("Auto Kill | General")
-local folder7 = AutoKill:AddFolder("Auto Kill | Fast")
-local folder8 = AutoKill:AddFolder("Auto Kill | Karma")
+local folder6 = AutoKill:AddFolder("Auto Kill General")
+local folder7 = AutoKill:AddFolder("Auto Kill Fast")
+local folder8 = AutoKill:AddFolder("Auto Kill Karma")
 
 local AutoRebirth = window:AddTab("Auto Rebirth")
 local folder9 = AutoRebirth:AddFolder("General Auto Rebirth")
