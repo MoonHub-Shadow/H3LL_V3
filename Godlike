@@ -480,8 +480,8 @@ for _, v in pairs(game:GetService("Workspace").machinesFolder:GetDescendants()) 
 if v.Name == "neededDurability" and v.Value == 0 and game.Players.LocalPlayer.Character:FindFirstChild("LeftHand") and game.Players.LocalPlayer.Character:FindFirstChild("RightHand") then
 firetouchinterest(v.Parent.Rock, game:GetService("Players").LocalPlayer.Character.RightHand, 0)
 firetouchinterest(v.Parent.Rock, game:GetService("Players").LocalPlayer.Character.RightHand, 1)
-firetouchinterest(v.Parent.Rock, game:GetService("Players").LocalPlayer.Character.LeftHand, 0)
-firetouchinterest(v.Parent.Rock, game:GetService("Players").LocalPlayer.Character.LeftHand, 1)
+firetouchinterest(v.Parent.Rock, game:GetService("Players").LeftHand, 0)
+firetouchinterest(v.Parent.Rock, game:GetService("Players").LeftHand, 1)
 end
 end
 end
@@ -502,8 +502,8 @@ for _, v in pairs(game:GetService("Workspace").machinesFolder:GetDescendants()) 
 if v.Name == "neededDurability" and v.Value == 150000 and game.Players.LocalPlayer.Character:FindFirstChild("LeftHand") and game.Players.LocalPlayer.Character:FindFirstChild("RightHand") then
 firetouchinterest(v.Parent.Rock, game:GetService("Players").LocalPlayer.Character.RightHand, 0)
 firetouchinterest(v.Parent.Rock, game:GetService("Players").LocalPlayer.Character.RightHand, 1)
-firetouchinterest(v.Parent.Rock, game:GetService("Players").LocalPlayer.Character.LeftHand, 0)
-firetouchinterest(v.Parent.Rock, game:GetService("Players").LocalPlayer.Character.LeftHand, 1)
+firetouchinterest(v.Parent.Rock, game:GetService("Players").LeftHand, 0)
+firetouchinterest(v.Parent.Rock, game:GetService("Players").LeftHand, 1)
 end
 end
 end
@@ -634,8 +634,8 @@ for _, v in pairs(game:GetService("Workspace").machinesFolder:GetDescendants()) 
 if v.Name == "neededDurability" and v.Value == 1000000 and game.Players.LocalPlayer.Character:FindFirstChild("LeftHand") and game.Players.LocalPlayer.Character:FindFirstChild("RightHand") then
 firetouchinterest(v.Parent.Rock, game:GetService("Players").LocalPlayer.Character.RightHand, 0)
 firetouchinterest(v.Parent.Rock, game:GetService("Players").LocalPlayer.Character.RightHand, 1)
-firetouchinterest(v.Parent.Rock, game:GetService("Players").LocalPlayer.Character.LeftHand, 0)
-firetouchinterest(v.Parent.Rock, game:GetService("Players").LocalPlayer.Character.LeftHand, 1)
+firetouchinterest(v.Parent.Rock, v.Parent.Rock, 0)
+firetouchinterest(v.Parent.Rock, v.Parent.Rock, 1)
 end
 end
 end
@@ -656,8 +656,8 @@ for _, v in pairs(game:GetService("Workspace").machinesFolder:GetDescendants()) 
 if v.Name == "neededDurability" and v.Value == 1000000 and game.Players.LocalPlayer.Character:FindFirstChild("LeftHand") and game.Players.LocalPlayer.Character:FindFirstChild("RightHand") then
 firetouchinterest(v.Parent.Rock, game:GetService("Players").LocalPlayer.Character.RightHand, 0)
 firetouchinterest(v.Parent.Rock, game:GetService("Players").LocalPlayer.Character.RightHand, 1)
-firetouchinterest(v.Parent.Rock, game:GetService("Players").LeftHand, 0)
-firetouchinterest(v.Parent.Rock, game:GetService("Players").LeftHand, 1)
+firetouchinterest(v.Parent.Rock, v.Parent.Rock, 0)
+firetouchinterest(v.Parent.Rock, v.Parent.Rock, 1)
 end
 end
 end
@@ -677,11 +677,11 @@ while getgenv().autoFarm do
 task.wait(0.001)
 if game:GetService("Players").LocalPlayer.Durability.Value >= 5000000 then
 for _, v in pairs(game:GetService("Workspace").machinesFolder:GetDescendants()) do
-if v.Name == "neededDurability" and v.Value == 5000000 and game.Players.LocalPlayer.Character:FindFirstChild("LeftHand") and game.Players.LocalPlayer.Character:FindFirstChild("RightHand") then
+if v.Name == "neededDurability" and v.Value == 5000000 and game.Players.LocalPlayer:FindFirstChild("LeftHand") and game.Players.LocalPlayer:FindFirstChild("RightHand") then
 firetouchinterest(v.Parent.Rock, game:GetService("Players").LocalPlayer.Character.RightHand, 0)
 firetouchinterest(v.Parent.Rock, game:GetService("Players").LocalPlayer.Character.RightHand, 1)
-firetouchinterest(v.Parent.Rock, game:GetService("Players").LeftHand, 0)
-firetouchinterest(v.Parent.Rock, game:GetService("Players").LeftHand, 1)
+firetouchinterest(v.Parent.Rock, v.Parent.Rock, 0)
+firetouchinterest(v.Parent.Rock, v.Parent.Rock, 1)
 end
 end
 end
@@ -699,11 +699,10 @@ while getgenv().autoFarm do
 task.wait()
 if game:GetService("Players").LocalPlayer.Durability.Value >= 5000000 then
 for _, v in pairs(game:GetService("Workspace").machinesFolder:GetDescendants()) do
-if v.Name == "neededDurability" and v.Value == 5000000 and game.Players.LocalPlayer.Character:FindFirstChild("LeftHand") and game.Players.LocalPlayer.Character:FindFirstChild("RightHand") then
+if v.Name == "neededDurability" and v.Value == 5000000 and game.Players.LocalPlayer:FindFirstChild("LeftHand") and game.Players.LocalPlayer:FindFirstChild("RightHand") then
 firetouchinterest(v.Parent.Rock, game:GetService("Players").LocalPlayer.Character.RightHand, 0)
-firetouchinterest(v.Parent.Rock, game:GetService("Players").LocalPlayer.Character.RightHand, 1)
-firetouchinterest(v.Parent.Rock, game:GetService("Players").LeftHand, 0)
-firetouchinterest(v.Parent.Rock, game:GetService("Players").LeftHand, 1)
+firetouchinterest(v.Parent.Rock, v.Parent.Rock, 0)
+firetouchinterest(v.Parent.Rock, v.Parent.Rock, 1)
 end
 end
 end
@@ -723,11 +722,11 @@ while getgenv().autoFarm do
 task.wait()
 if game:GetService("Players").LocalPlayer.Durability.Value >= 10000000 then
 for _, v in pairs(game:GetService("Workspace").machinesFolder:GetDescendants()) do
-if v.Name == "neededDurability" and v.Value == 10000000 and game.Players.LocalPlayer.Character:FindFirstChild("LeftHand") and game.Players.LocalPlayer.Character:FindFirstChild("RightHand") then
+if v.Name == "neededDurability" and v.Value == 10000000 and game.Players.LocalPlayer.Character:FindFirstChild("LeftHand") and game.Players.LocalPlayer:FindFirstChild("RightHand") then
 firetouchinterest(v.Parent.Rock, game:GetService("Players").LocalPlayer.Character.RightHand, 0)
 firetouchinterest(v.Parent.Rock, game:GetService("Players").LocalPlayer.Character.RightHand, 1)
-firetouchinterest(v.Parent.Rock, game:GetService("Players").LocalPlayer.Character.LeftHand, 0)
-firetouchinterest(v.Parent.Rock, game:GetService("Players").LocalPlayer.Character.LeftHand, 1)
+firetouchinterest(v.Parent.Rock, game:GetService("Players").LeftHand, 0)
+firetouchinterest(v.Parent.Rock, game:GetService("Players").LeftHand, 1)
 end
 end
 end
@@ -745,7 +744,7 @@ while getgenv().autoFarm do
 task.wait()
 if game:GetService("Players").LocalPlayer.Durability.Value >= 10000000 then
 for _, v in pairs(game:GetService("Workspace").machinesFolder:GetDescendants()) do
-if v.Name == "neededDurability" and v.Value == 10000000 and game.Players.LocalPlayer.Character:FindFirstChild("LeftHand") and game.Players.LocalPlayer.Character:FindFirstChild("RightHand") then
+if v.Name == "neededDurability" and v.Value == 10000000 and game.Players.LocalPlayer.Character:FindFirstChild("LeftHand") and game.Players.LocalPlayer:FindFirstChild("RightHand") then
 firetouchinterest(v.Parent.Rock, game:GetService("Players").LocalPlayer.Character.RightHand, 0)
 firetouchinterest(v.Parent.Rock, game:GetService("Players").LocalPlayer.Character.RightHand, 1)
 firetouchinterest(v.Parent.Rock, game:GetService("Players").LeftHand, 0)
@@ -755,7 +754,7 @@ end
 end
 end)
 end
-end)
+end
 
 
 
