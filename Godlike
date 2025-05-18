@@ -1,40 +1,284 @@
+
+██╗░░██╗██████╗░██╗░░░░░██╗░░░░░
+██║░░██║╚════██╗██║░░░░░██║░░░░░
+███████║░█████╔╝██║░░░░░██║░░░░░
+██╔══██║░╚═══██╗██║░░░░░██║░░░░░
+██║░░██║██████╔╝███████╗███████╗
+╚═╝░░╚═╝╚═════╝░╚══════╝╚══════╝
+
+██╗░░░██╗██████╗░
+██║░░░██║╚════██╗
+╚██╗░██╔╝░█████╔╝
+░╚████╔╝░░╚═══██╗
+░░╚██╔╝░░██████╔╝
+░░░╚═╝░░░╚═════╝░
+
+
+
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/memejames/elerium-v2-ui-library/main/Library", true))()
 
 local window = library:AddWindow("H3LL V3", {
-    main_color = Color3.fromRGB(66, 164, 115),
+    main_color = Color3.fromRGB(255, 0, 0),
     min_size = Vector2.new(470, 470),
     can_resize = false,
 })
 
 local Main = window:AddTab("Main")
-local folder0 = Main:AddFolder("Anti shi")
-local folder1 = Main:AddFolder("Misc V1")
-local folder2 = Main:AddFolder("Auto Brawls")
+local folder = Main:AddFolder("Anti Shi")
 
-local AutoWeights = window:AddTab("Auto Weights")
-local folder3 = AutoWeight:AddFolder("Fast Options")
-local folder4 = AutoWeight:AddFolder("Tools")
-local folder5 = AutoWeight:AddFolder("Gym Machines")
 
-local AutoKill = window:AddTab("Auto Kill")
-local folder6 = AutoKill:AddFolder("Auto Kill | General")
-local folder7 = AutoKill:AddFolder("Auto Kill | Fast")
-local folder8 = AutoKill:AddFolder("Auto Kill | Karma")
+folder:AddButton("Anti Afk", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/evxncodes/mainroblox/main/anti-afk", true))()
+end)
 
-local AutoRebirth = window:AddTab("Auto Rebirth")
-local folder9 = AutoRebirth:AddFolder("General Auto Rebirth")
-local folder10 = AutoRebirth:AddFolder("Target Rebirths")
-local folder11 = AutoRebirth:AddFolder("Helpful Tools")
+folder:AddButton("FPS Boost", function()
+    RemoveLag() 
 
-local AutoRocks = window:AddTab("Auto Rocks")
-local folder12 = AutoRocks:AddFolder("Auto Rocks")
+            cleanupLoop = task.spawn(function()
 
-local Teleports = window:AddTab("Teleports")
-local folder13 = Teleports:AddFolder("Teleports")
+                while Value do 
+                    wait(30) 
+                    RemoveLag() 
+                end
 
-local Instructions = window:AddTab("Instructions")
+            end)
 
-local Credits = window:AddTab("Credits")
+        else
 
-local LinkedScripts = window:AddTab("Linked Scripts")
+            
+            if cleanupLoop then
+
+                task.cancel(cleanupLoop) 
+                cleanupLoop = nil
+
+            end
+
+        end
+
+    end)
+
+
+
+folder:AddButton("Less Lag", function()
+    for _, v in pairs(game:GetDescendants()) do
+
+			if v:IsA("ParticleEmitter") or v:IsA("Trail") or v:IsA("Smoke") or v:IsA("Fire") or v:IsA("Sparkles") then
+
+				v.Enabled = false
+
+			end
+
+		end
+
+		local lighting = game:GetService("Lighting")
+
+		lighting.GlobalShadows = false
+
+		lighting.FogEnd = 9e9
+
+		for _, v in pairs(workspace:GetDescendants()) do
+
+			if v:IsA("BasePart") and not v.Parent:FindFirstChild("Humanoid") then
+
+				v.Material = Enum.Material.SmoothPlastic
+
+				if v:IsA("Texture") then
+
+					v:Destroy()
+
+				end
+
+			end
+
+		end
+
+		settings().Rendering.QualityLevel = 0
+
+	end)
+
+
+folder:AddButton("ULTRA COMBINATION", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/evxncodes/mainroblox/main/anti-afk", true))()
+    
+    RemoveLag() 
+
+            cleanupLoop = task.spawn(function()
+
+                while Value do 
+                    wait(30) 
+                    RemoveLag() 
+                end
+
+            end)
+
+        else
+
+            
+            if cleanupLoop then
+
+                task.cancel(cleanupLoop) 
+                cleanupLoop = nil
+
+            end
+
+        end
+
+for _, v in pairs(game:GetDescendants()) do
+
+			if v:IsA("ParticleEmitter") or v:IsA("Trail") or v:IsA("Smoke") or v:IsA("Fire") or v:IsA("Sparkles") then
+
+				v.Enabled = false
+
+			end
+
+		end
+
+		local lighting = game:GetService("Lighting")
+
+		lighting.GlobalShadows = false
+
+		lighting.FogEnd = 9e9
+
+		for _, v in pairs(workspace:GetDescendants()) do
+
+			if v:IsA("BasePart") and not v.Parent:FindFirstChild("Humanoid") then
+
+				v.Material = Enum.Material.SmoothPlastic
+
+				if v:IsA("Texture") then
+
+					v:Destroy()
+
+				end
+
+			end
+
+		end
+
+		settings().Rendering.QualityLevel = 0
+end)
+
+
+
+
+    
+local folder1 = Main:AddFolder("Misc")
+
+folder1:AddSwitch("Night Time", function(Value)
+    nighttime = Value
+    if nighttime then
+        
+            game.Lighting.TimeOfDay = "00:00:00" 
+        else
+
+            
+            game.Lighting.TimeOfDay = "12:00:00" 
+        end
+
+    end
+
+end)
+
+
+folder1:AddSwitch("Dawn", function(Value)
+    dawn = Value
+    if dawn then
+        
+            game.Lighting.TimeOfDay = "06:00:00" 
+
+        else
+
+            
+            game.Lighting.TimeOfDay = "12:00:00" 
+        end
+
+    end
+
+})
+
+
+folder1:AddSwitch("Auto Spin Wheel", function(v)
+    autospinwheel = v
+    while v do
+        game:GetService("ReplicatedStorage").rEvents.openFortuneWheelRemote:InvokeServer("openFortuneWheel", game:GetService("ReplicatedStorage").fortuneWheelChances["Fortune Wheel"])
+			task.wait(1)
+		end
+	end
+end)
+
+
+
+folder1:AddSwitch("Auto Claim Gifts", function(v)
+    autoclaimgifts = v
+    while v do
+      for i = 1, 8 do
+				game:GetService("ReplicatedStorage").rEvents.freeGiftClaimRemote:InvokeServer("claimGift", i)
+			end
+			task.wait(1)
+		end
+	end
+end)
+
+
+
+local folder2 = Main:AddFolder("Auto Equip Pets")
+
+
+local function unequipAllPets()
+
+	local petsFolder = game:GetService("Players").LocalPlayer.petsFolder
+
+	for _, folder in pairs(petsFolder:GetChildren()) do
+
+		if folder:IsA("Folder") then
+
+			for _, pet in pairs(folder:GetChildren()) do
+
+				game:GetService("ReplicatedStorage").rEvents.equipPetEvent:fireServer("unequipPet", pet)
+
+			end
+
+		end
+
+	end
+
+	task.wait(.1)
+
+end
+
+local petTypes = {
+    ["Swift Samurai"] = "Equip All Swift Samurai"
+["Tribal Overlord"] = "Equip All Tribal Overlord" 
+    ["Mighty Monster"] = "Equip All Mighty Monster"
+["Wild Wizard"] = "Equip All Wild Wizard"
+    
+    
+for petName, ButtonTitle in pairs(petTypes) do
+    folder2:AddButton("ButtonTitle", function()
+        unequipAllPets()
+
+			for _, pet in pairs(game:GetService("Players").LocalPlayer.petsFolder.Unique:GetChildren()) do
+
+				if pet.Name == petName then
+
+					game:GetService("ReplicatedStorage").rEvents.equipPetEvent:fireServer("equipPet", pet)
+
+				end
+
+			end
+
+		end
+
+	})
+
+end
+        
+
+local folder3 = Main:AddFolder("Size Changers")
+
+
+folder3:AddInput("Input size", function(Text)
+
+        
+    
 
